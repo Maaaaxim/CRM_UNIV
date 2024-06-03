@@ -12,7 +12,7 @@
 <div class="col-md-6">
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Действия</h3>
+            <h3 class="card-title">Дії</h3>
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                     <i class="fas fa-minus"></i>
@@ -23,44 +23,43 @@
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">Инструкция</h4>
+                        <h4 class="modal-title">Інструкція</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p><strong>В блоке “действия” вы увидите следующие элементы:</strong></p>
+                        <p><strong>У блоці “дії” ви побачите наступні елементи:</strong></p>
                         <ul>
-                            <li><strong>Распределить по выделенным:</strong> кнопка, позволяющая равномерно распределить лиды между выбранными сейлами.</li>
-                            <li><strong>Инструкция:</strong> кнопка для вызова этого модального окна с инструкциями.</li>
-                            <li><strong>Вы выбрали:</strong> плашка, показывающая количество выбранных лидов.</li>
+                            <li><strong>Розподілити по виділеним:</strong> кнопка, що дозволяє рівномірно розподілити ліди між обраними сейлами.</li>
+                            <li><strong>Інструкція:</strong> кнопка для виклику цього модального вікна з інструкціями.</li>
+                            <li><strong>Ви вибрали:</strong> плашка, що показує кількість обраних лідів.</li>
                         </ul>
-                        <p><strong>Инструкция по распределению лидов:</strong></p>
+                        <p><strong>Інструкція по розподілу лідів:</strong></p>
                         <ol>
-                            <li>В таблице ниже выберите сейлов, между которыми хотите распределить лиды, установив галочки.</li>
-                            <li>Нажмите на кнопку “Распределить по выделенным”. Лиды равномерно распределятся между выбранными сейлами, и количество лидов на одного сейла будет выведено в колонке “Количество лидов”.</li>
-                            <li>Если хотите изменить количество лидов, которое было распределено автоматически, вы можете изменить значения в инпутах в колонке “Количество лидов”.</li>
-                            <li>Также вы можете распределить лиды вручную, указав в инпутах в колонке “Количество лидов” количество лидов, которое хотите выдать каждому сейлу.</li>
-                            <li>Чтобы изменения вступили в силу, нажмите кнопку "Сохранить".</li>
+                            <li>У таблиці нижче виберіть сейлів, між якими хочете розподілити ліди, встановивши галочки.</li>
+                            <li>Натисніть на кнопку “Розподілити по виділеним”. Ліди рівномірно розподіляться між обраними сейлами, і кількість лідів на одного сейла буде виведено в колонці “Кількість лідів”.</li>
+                            <li>Якщо хочете змінити кількість лідів, яке було розподілено автоматично, ви можете змінити значення в інпутах у колонці “Кількість лідів”.</li>
+                            <li>Також ви можете розподілити ліди вручну, вказавши в інпутах у колонці “Кількість лідів” кількість лідів, яке хочете видати кожному сейлу.</li>
+                            <li>Щоб зміни набули чинності, натисніть кнопку "Зберегти".</li>
                         </ol>
                     </div>
                     <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button>
                     </div>
                 </div>
             </div>
         </div>
 
-
         <div class="card-body" style="display: block;">
             <div class="form-group">
                 <button type="button" class="btn btn-primary" data-toggle="modal">
-                    Распределить по выделенным
+                    Розподілити по виділеним
                 </button>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#instruction-modal">
-                    Инструкция
+                    Інструкція
                 </button>
-                <span class="info-badge">Вы выбрали: {{ count($leadsArray) }} лидов</span>
+                <span class="info-badge">Ви вибрали: {{ count($leadsArray) }} лідів</span>
             </div>
         </div>
     </div>

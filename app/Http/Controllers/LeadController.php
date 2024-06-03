@@ -667,7 +667,7 @@ class LeadController extends Controller
             return redirect($redirectTo);
         }
 
-        return back()->with('success', 'Лиды успешно сохранены!');
+        return back()->with('success', 'Ліди успішно збережені!');
     }
 
     public function creationLeadPage()
@@ -728,7 +728,7 @@ class LeadController extends Controller
                 $lead->logChange('user_id_changed', null, $sales_id);
             }
 
-            return redirect()->back()->with('success', 'Лид успешно создан!');
+            return redirect()->back()->with('success', 'Лід додано!');
         } catch (\Exception $e) {
             Log::error('СМЭРТЬ!', [
                 'phone' => $request->phone,
@@ -859,7 +859,7 @@ class LeadController extends Controller
 
         if ($comment) {
             $comment->delete();
-            return redirect()->back()->with('success', 'Коментарий успешно удален!');
+            return redirect()->back()->with('success', 'Коментар видалено!');
         } else {
             return redirect()->back()->with('errors', 'Коментарий не найден!');
         }

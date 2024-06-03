@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="content-wrapper">
-        <!-- Создание команды -->
+        <!-- Створення команди -->
         @can('delete team')
             <form method="post" action="{{route('createTeam')}}">
                 @csrf
@@ -13,7 +13,7 @@
                         <input type="text" class="form-control" id="team" placeholder="Команда" name="team" required>
                     </div>
                     <div class="form-group">
-                        <label>Дэск</label>
+                        <label>Деск</label>
                         <input type="hidden" value="{{ Auth::user()->desk_id }}">
                         <select name="desk_id" id="deskFilter"
                                 class="form-control custom-select filter-select" {{ !Auth::user()->hasRole('super-admin') ? 'disabled' : '' }}>
@@ -24,21 +24,19 @@
                                 </option>
                             @endforeach
                         </select>
-
                     </div>
                 </div>
 
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-primary">Создать</button>
+                    <button type="submit" class="btn btn-primary">Створити</button>
                 </div>
             </form>
-
         @endcan
         <!-- Список команд -->
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Команды</h3>
+                    <h3 class="card-title">Команди</h3>
                 </div>
 
                 <div class="card-body">
@@ -48,7 +46,7 @@
                             <th>ID</th>
                             <th>Команда</th>
                             @can('delete team')
-                                <th>Удалить</th>
+                                <th>Видалити</th>
                             @endcan
                         </tr>
                         </thead>
@@ -60,7 +58,7 @@
                                 @can('delete team')
                                     <td>
                                         <a href="{{route('deleteTeam', ['id' => $team->team_id])}}">
-                                            <button type="button" class="btn btn-danger">Удалить команду</button>
+                                            <button type="button" class="btn btn-danger">Видалити команду</button>
                                         </a>
                                     </td>
                                 @endcan
@@ -71,7 +69,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
 @endsection

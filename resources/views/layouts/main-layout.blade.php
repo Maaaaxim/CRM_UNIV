@@ -104,7 +104,7 @@
                 <div class="card-container">
                     <div class="card bg-success">
                         <div class="card-header">
-                            <h3 class="card-title">Успех</h3>
+                            <h3 class="card-title">Успіх</h3>
                             <div class="card-tools">
                                 <button type="button" class="btn btn-tool" data-card-widget="remove"><i
                                         class="fas fa-times"></i></button>

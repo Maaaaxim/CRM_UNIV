@@ -40,7 +40,7 @@
 
     <div class="card">
         <div class="card-body login-card-body">
-            <p class="login-box-msg">Войдите чтобы начать
+            <p class="login-box-msg">Ввійдіть в систему
                 {{auth()->check()}}
             </p>
 
@@ -68,7 +68,7 @@
                 </div>
                 <div class="row">
                     <div class="col-1 text-center">
-                        <button type="submit" class="btn btn-primary">Войти</button>
+                        <button type="submit" class="btn btn-primary">Ввійти</button>
                     </div>
                 </div>
             </form>

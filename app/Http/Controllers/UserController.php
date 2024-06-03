@@ -67,7 +67,7 @@ class UserController extends Controller
             $user->givePermissionTo($permission);
         }
 
-        session()->flash('success', 'Успешная регистрация');
+        session()->flash('success', 'Користовача додано');
         return redirect()->route('userCreation');
     }
 

@@ -2,7 +2,7 @@
 
     function reassignment(leadId, element, user_id) {
         @include('parts.всплывашки.error', ['message' => 'Ошибка'])
-        @include('parts.всплывашки.success', ['message' => 'Лид передан'])
+        @include('parts.всплывашки.success', ['message' => 'Лід переданий'])
         const selectedUser = element.value;
         const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 

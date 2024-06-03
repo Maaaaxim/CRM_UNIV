@@ -1,25 +1,23 @@
 <div class="col-12">
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Распределение cейлам</h3>
+            <h3 class="card-title">Розподіл сейлам</h3>
         </div>
 
         <div class="card-body">
             <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4">
-                {{--массовые действия--}}
+                {{--масові дії--}}
                 <div class="row">
                     @include('parts.DistributionActions', [])
                     @include('parts.DistributionFIlters', ['teams'=>$teams, 'desks'=>$desks])
-
                 </div>
-                {{--конец массовых действий--}}
+                {{--кінець масових дій--}}
 
                 <form action="{{ route('distributionleadsAssign')}}" method="post" id="leadsFormPlus">
 
                     @csrf
 
                     <div class="row">
-
                         <div class="col-sm-12">
                             <div class="card-body table-responsive p-0">
                             </div>
@@ -29,14 +27,12 @@
                                     <th><input type="checkbox"
                                                class="lead-checkbox"
                                                name="assigned_leads[]"></th>
-                                    <th>Имя</th>
-                                    <th>Роль
-                                    </th>
-                                    <th>Деск
-                                    </th>
+                                    <th>Ім'я</th>
+                                    <th>Роль</th>
+                                    <th>Деск</th>
                                     <th>Команда</th>
-                                    <th>Текущее количество лидов</th>
-                                    <th>Количество лидов</th>
+                                    <th>Поточна кількість лідів</th>
+                                    <th>Кількість лідів</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -46,11 +42,10 @@
                                                    class="lead-checkbox lead-checkbox-td"
                                                    name="assigned_leads[]" value="{{ $user->id }}"></td>
                                         <td><a href=""> {{ $user->name }}</a></td>
-
                                         <td>{{$user->role}}</td>
-                                        <td>{{$user->desk ? $user->desk->desk : 'Нет деска'}}</td>
-                                        <td>{{$user->team ? $user->team->team : 'Нет команды'}}</td>
-                                        <td> {{$user->userLeadsCount ? $user->userLeadsCount : 'Нет лидов'}}</td>
+                                        <td>{{$user->desk ? $user->desk->desk : 'Немає деска'}}</td>
+                                        <td>{{$user->team ? $user->team->team : 'Немає команди'}}</td>
+                                        <td> {{$user->userLeadsCount ? $user->userLeadsCount : 'Немає лідів'}}</td>
                                         <td><input type="text" class="form-control leads-input"></td>
                                     </tr>
                                 @endforeach
@@ -60,7 +55,7 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-12 col-md-5">
-                            <button type="submit" class="btn btn-primary">Сохранить</button>
+                            <button type="submit" class="btn btn-primary">Зберегти</button>
                         </div>
                     </div>
                     <div id="leads-hidden-fields">

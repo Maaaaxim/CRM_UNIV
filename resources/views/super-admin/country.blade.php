@@ -8,9 +8,8 @@
             <section class="content">
                 <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">Создать страну</h3>
+                        <h3 class="card-title">Створити країну</h3>
                     </div>
-
 
                     <form method="post" action="{{route('createCountry')}}">
 
@@ -18,16 +17,16 @@
 
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="name">Код страны</label>
-                                <input type="name" class="form-control" id="code" placeholder="Код страны"
+                                <label for="code">Код країни</label>
+                                <input type="text" class="form-control" id="code" placeholder="Код країни"
                                        name="code" required>
-                                <label for="name">Страна</label>
-                                <input type="name" class="form-control" id="name" placeholder="Страна"
+                                <label for="name">Країна</label>
+                                <input type="text" class="form-control" id="name" placeholder="Країна"
                                        name="country" required>
                             </div>
                         </div>
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-primary">Создать</button>
+                            <button type="submit" class="btn btn-primary">Створити</button>
                         </div>
                     </form>
                 </div>
@@ -36,7 +35,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Страны</h3>
+                    <h3 class="card-title">Країни</h3>
                 </div>
 
                 <div class="card-body">
@@ -56,11 +55,11 @@
                                     </th>
                                     <th class="sorting sorting_asc" tabindex="0" aria-controls="example2"
                                         rowspan="1" colspan="1" aria-sort="ascending"
-                                        aria-label="Rendering engine: activate to sort column descending">Страна
+                                        aria-label="Rendering engine: activate to sort column descending">Країна
                                     </th>
                                     @can('delete country')
                                         <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1"
-                                            colspan="1" aria-label="Browser: activate to sort column ascending">Удалить
+                                            colspan="1" aria-label="Browser: activate to sort column ascending">Видалити
                                         </th>
                                     @endcan
                                 </tr>
@@ -75,7 +74,7 @@
                                             <td>
                                                 <a href="{{route('deleteCountry', ['id' => $country->country_id])}}">
                                                     <button type="button" class="btn btn-danger">
-                                                        Удалить страну
+                                                        Видалити країну
                                                     </button>
                                                 </a>
                                             </td>
@@ -89,16 +88,13 @@
 
                     <div class="row">
                         <div class="col-sm-12 col-md-5">
-
                         </div>
-
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-    </div>
+
 
     @section('scripts')
         <script>

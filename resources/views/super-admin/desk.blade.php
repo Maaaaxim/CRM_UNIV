@@ -3,26 +3,26 @@
 @section('content')
 
     <div class="content-wrapper">
-        <!-- Создание дэска -->
+        <!-- Створення деска -->
         @can('delete desk')
             <form method="post" action="{{route('createDesk')}}">
                 @csrf
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="desk">Дэск</label>
-                        <input type="text" class="form-control" id="desk" placeholder="Дэск" name="desk" required>
+                        <label for="desk">Деск</label>
+                        <input type="text" class="form-control" id="desk" placeholder="Деск" name="desk" required>
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-primary">Создать</button>
+                    <button type="submit" class="btn btn-primary">Створити</button>
                 </div>
             </form>
         @endcan
-        <!-- Список дэсок -->
+        <!-- Список десків -->
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Дэски</h3>
+                    <h3 class="card-title">Дески</h3>
                 </div>
 
                 <div class="card-body">
@@ -30,9 +30,9 @@
                         <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Дэск</th>
+                            <th>Деск</th>
                             @can('delete desk')
-                                <th>Удалить</th>
+                                <th>Видалити</th>
                             @endcan
                         </tr>
                         </thead>
@@ -42,12 +42,12 @@
                                 <td>{{ $desk->desk_id }}</td>
                                 <td>{{ $desk->desk }}</td>
                                 @can('delete desk')
-                                <td>
-                                    <a href="{{route('deleteDesk', ['id' => $desk->desk_id])}}">
-                                        <button type="button" class="btn btn-danger">Удалить дэск</button>
-                                    </a>
-                                </td>
-                                    @endcan
+                                    <td>
+                                        <a href="{{route('deleteDesk', ['id' => $desk->desk_id])}}">
+                                            <button type="button" class="btn btn-danger">Видалити деск</button>
+                                        </a>
+                                    </td>
+                                @endcan
                             </tr>
                         @endforeach
                         </tbody>
@@ -55,7 +55,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
 @endsection

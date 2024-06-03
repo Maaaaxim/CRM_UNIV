@@ -26,7 +26,7 @@ class StatusController extends Controller
             'color' => $request->color ?? null,
         ]);
 
-        return redirect()->back()->with('success', 'Статус успешно создан!');
+        return redirect()->back()->with('success', 'Статус додано!');
     }
 
     public function deleteStatus($statusId)
@@ -38,7 +38,7 @@ class StatusController extends Controller
             Lead::where('status', $statusId)->update(['status' => 1]);
 
             $status->delete();
-            return redirect()->back()->with('success', 'Статус успешно удален!');
+            return redirect()->back()->with('success', 'Статус видалений!');
         } else {
             return redirect()->back()->with('errors', 'Статус не найден!');
         }

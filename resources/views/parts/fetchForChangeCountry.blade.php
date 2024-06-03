@@ -2,7 +2,7 @@
 
     function changeCountry(leadId, element) {
         @include('parts.всплывашки.error', ['message' => 'Ошибка'])
-        @include('parts.всплывашки.success', ['message' => 'Страна изменена'])
+        @include('parts.всплывашки.success', ['message' => 'Країна змінена'])
         const selectedCountry = element.value;
         const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Country;
-use App\Models\Status;
 use Illuminate\Http\Request;
 
 class CountryController extends Controller
@@ -35,7 +34,7 @@ class CountryController extends Controller
 
         if ($country) {
             $country->delete();
-            return redirect()->back()->with('success', 'Страна успешно удалена!');
+            return redirect()->back()->with('success', 'Країна видалена!');
         } else {
             return redirect()->back()->with('error', 'Страна не найдена!');
         }

@@ -12,16 +12,16 @@
             <div class="form-group">
                 @can('assign lead')
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default">
-                        Выдать сейлу
+                        Видати сейлу
                     </button>
                     <button type="button" class="btn btn-primary" data-toggle="modal" onclick="submitLeads()">
-                        Ра<strong>C</strong>пределить лидов
+                        Розподілити лідів
                     </button>
                 @endcan
                 @can('delete lead')
                     <button type="button" class="btn btn-danger"
                             id="deleteMass"
-                            data-dismiss="modal">Удалить
+                            data-dismiss="modal">Видалити
                     </button>
                 @endcan
             </div>
@@ -29,17 +29,17 @@
             {{-- @include('parts.ModalMassDistribution', ['users' =>$users]) --}}
 
             <div class="form-group">
-                <label for="inputStatus">Изменить статус</label>
+                <label for="inputStatus">Змінити статус</label>
 
                 <select id="inputStatus" class="form-control custom-select">
-                    <option value="0">Все</option>
+                    <option value="0">Всі</option>
 
                     @php
                         $isFirstRetention = true;
                         $isTeamLead = auth()->user()->hasRole('teamlead');
                         $isRetentionTeamLead = auth()->user()->hasRole('retention_teamlead');
-                        $showStatuses = true; // для начала отображаем все статусы
-                        $hideStatuses = $isRetentionTeamLead; // скрываем статусы для retention_teamlead до разделителя
+                        $showStatuses = true; // для початку відображаємо всі статуси
+                        $hideStatuses = $isRetentionTeamLead; // ховаємо статуси для retention_teamlead до роздільника
                     @endphp
 
                     @foreach($all_statuses as $status)
@@ -49,10 +49,10 @@
                             @php
                                 $isFirstRetention = false;
                                 if ($isTeamLead) {
-                                    $showStatuses = false; // перестаем отображать статусы для teamlead после разделителя
+                                    $showStatuses = false; // перестаємо відображати статуси для teamlead після роздільника
                                 }
                                 if ($isRetentionTeamLead) {
-                                    $hideStatuses = false; // начинаем отображать статусы для retention_teamlead после разделителя
+                                    $hideStatuses = false; // починаємо відображати статуси для retention_teamlead після роздільника
                                 }
                             @endphp
                         @endif
@@ -69,11 +69,11 @@
             {{--            <div class="form-group">--}}
             {{--                <div class="custom-control custom-checkbox">--}}
             {{--                    <input type="checkbox" class="custom-control-input" id="selectAllLeads">--}}
-            {{--                    <label class="custom-control-label" for="selectAllLeads">Выбрать всех лидов в базе</label>--}}
+            {{--                    <label class="custom-control-label" for="selectAllLeads">Вибрати всіх лідів у базі</label>--}}
             {{--                </div>--}}
             {{--            </div>--}}
-            {{--            <button type="button" id="submitFormBtn" class="btn btn-primary">Сохранить</button>--}}
-            <button type="button" id="submitFormBtnTrue" class="btn btn-primary">Сохранить</button>
+            {{--            <button type="button" id="submitFormBtn" class="btn btn-primary">Зберегти</button>--}}
+            <button type="button" id="submitFormBtnTrue" class="btn btn-primary">Зберегти</button>
 
         </div>
     </div>

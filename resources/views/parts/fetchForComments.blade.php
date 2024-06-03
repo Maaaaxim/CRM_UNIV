@@ -19,7 +19,7 @@
 
     function addComment(leadId, userId, comment) {
         @include('parts.всплывашки.error', ['message' => 'Ошибка'])
-        @include('parts.всплывашки.success', ['message' => 'Коментарий добавлен'])
+        @include('parts.всплывашки.success', ['message' => 'Коментар добавлений'])
 
         const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 

@@ -11,38 +11,37 @@
         <div class="card-body" style="display: none;">
             <div class="form-group">
                 <label for="searchId">ID</label>
-                <input type="text" class="form-control" id="searchId" placeholder="Введите ID">
+                <input type="text" class="form-control" id="searchId" placeholder="Введіть ID">
             </div>
             <div class="form-group">
-                <label for="searchName">Имя</label>
-                <input type="text" class="form-control" id="searchName" placeholder="Введите Имя">
+                <label for="searchName">Ім'я</label>
+                <input type="text" class="form-control" id="searchName" placeholder="Введіть Ім'я">
             </div>
             <div class="form-group">
                 <label for="searchPhone">Телефон</label>
-                <input type="text" class="form-control" id="searchPhone" placeholder="Введите Телефон">
+                <input type="text" class="form-control" id="searchPhone" placeholder="Введіть Телефон">
             </div>
             <div class="form-group">
                 <label for="searchEmail">Email</label>
-                <input type="email" class="form-control" id="searchEmail" placeholder="Введите Email">
+                <input type="email" class="form-control" id="searchEmail" placeholder="Введіть Email">
             </div>
             <div class="form-group">
-                <label for="searchAffiliate">Афил</label>
-                <input type="text" class="form-control" id="searchAffiliate" placeholder="Введите Афил">
+                <label for="searchAffiliate">Афіл</label>
+                <input type="text" class="form-control" id="searchAffiliate" placeholder="Введіть Афіл">
             </div>
             <div class="form-group">
                 <label for="searchAdvert">Реклама</label>
-                <input type="text" class="form-control" id="searchAdvert" placeholder="Введите Рекламу">
+                <input type="text" class="form-control" id="searchAdvert" placeholder="Введіть Рекламу">
             </div>
             <div class="row">
                 <div class="col-md-3">
-                    <button type="button" id="searchButton" class="btn btn-primary">Поиск</button>
+                    <button type="button" id="searchButton" class="btn btn-primary">Пошук</button>
                 </div>
                 <div class="col-md-9">
                     <a href="{{ route('showLeads', array_filter(['page' => request('page'), 'per_page' => request('per_page')])) }}"
-                       class="btn btn-primary w-100">Сбросить фильтры и параметры поиска</a>
+                       class="btn btn-primary w-100">Скинути фільтри та параметри пошуку</a>
                 </div>
             </div>
-
         </div>
     </div>
 </div>

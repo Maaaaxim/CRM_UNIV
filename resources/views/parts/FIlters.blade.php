@@ -33,7 +33,7 @@
         <input type="hidden" name="per_page" value="{{ request('per_page', 10) }}">
         <div class="card card-primary collapsed-card">
             <div class="card-header">
-                <h3 class="card-title">Фильтр</h3>
+                <h3 class="card-title">Фільтр</h3>
                 <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                         <i class="fas fa-plus"></i>
@@ -45,11 +45,11 @@
                 <div class="form-group row">
 
                     <div class="col-md-6">
-                        <label for="inputStatus">Сейлы</label>
+                        <label for="inputStatus">Продажі</label>
                         <select id="salesFilter" name="sales_id[]"
                                 class="form-control custom-select filter-select" multiple>
-                            <option value="0">Все</option>
-                            <option value="free">Свободные</option>
+                            <option value="0">Всі</option>
+                            <option value="free">Вільні</option>
                             @foreach($users as $user)
                                 <option
                                     value="{{ $user->id }}">
@@ -63,7 +63,7 @@
                         <label for="inputStatus">Команда</label>
                         <select id="teamFilter" name="team_id"
                                 class="form-control custom-select filter-select">
-                            <option value="0">Все</option>
+                            <option value="0">Всі</option>
                             @foreach($teams as $team)
                                 <option
                                     value="{{ $team->team_id }}">
@@ -77,9 +77,9 @@
                 <div class="form-group row">
 
                     <div class="col-md-6">
-                        <label for="inputStatus">Дэска</label>
+                        <label for="inputStatus">Деск</label>
                         <select id="deskFilter" name="desk_id" class="form-control custom-select filter-select">
-                            <option value="0">Все</option>
+                            <option value="0">Всі</option>
                             @foreach($desks as $desk)
                                 <option
                                     value="{{ $desk->desk_id }}">
@@ -95,7 +95,7 @@
                         <select id="statusesFilter" name="status_prefixed_id[]"
                                 class="form-control custom-select filter-select" multiple>
 
-                            <option value="0">Все</option>
+                            <option value="0">Всі</option>
                             @php
                                 $isFirstRetention = true;
                             @endphp
@@ -112,31 +112,17 @@
                             @endforeach
                         </select>
                     </div>
-                    {{--                    <div class="col-md-3">--}}
-                    {{--                        <label for="inputStatus">Р статус</label>--}}
-                    {{--                        <select id="statusesFilter" name="retention_status_id"--}}
-                    {{--                                class="form-control custom-select filter-select">--}}
-                    {{--                            <option value="0">Все</option>--}}
-                    {{--                            @foreach($retention_statuses as $retention_status)--}}
-                    {{--                                <option--}}
-                    {{--                                    value="{{ $retention_status->id }}">--}}
-                    {{--                                    {{ $retention_status->name }}--}}
-                    {{--                                </option>--}}
-                    {{--                            @endforeach--}}
-                    {{--                        </select>--}}
-                    {{--                    </div>--}}
-
                 </div>
                 <div class="form-group row">
 
                     <div class="col-md-6">
-                        <label for="unique_user_id_updated_at">Дата прикрепления</label>
+                        <label for="unique_user_id_updated_at">Дата прикріплення</label>
                         <input type="text" id="unique_user_id_updated_at" name="unique_user_id_updated_at" autocomplete="off"
                                class="form-control" placeholder="YYYY-MM-DD - YYYY-MM-DD">
                     </div>
 
                     <div class="col-md-6">
-                        <label for="dateRange">Дата добавления</label>
+                        <label for="dateRange">Дата додавання</label>
                         <input type="text" id="dateRange" name="dateRange" class="form-control" autocomplete="off"
                                placeholder="YYYY-MM-DD - YYYY-MM-DD">
                     </div>
@@ -145,10 +131,10 @@
                 <div class="form-group row">
 
                     <div class="col-md-6">
-                        <label for="inputStatus">Страна</label>
+                        <label for="inputStatus">Країна</label>
                         <select id="countriesFilter" name="country_id"
                                 class="form-control custom-select filter-select">
-                            <option value="0">Все</option>
+                            <option value="0">Всі</option>
                             @foreach($countries as $country)
                                 <option
                                     value="{{ $country->country_id }}"
@@ -159,9 +145,9 @@
                         </select>
                     </div>
                     <div class="col-md-6">
-                        <button type="submit" class="btn btn-primary w-100 mb-3">Применить фильтры</button>
+                        <button type="submit" class="btn btn-primary w-100 mb-3">Застосувати фільтри</button>
                         <a href="{{ route('showLeads', array_filter(['page' => request('page'), 'per_page' => request('per_page')])) }}"
-                           class="btn btn-primary w-100">Сбросить фильтры и параметры поиска</a>
+                           class="btn btn-primary w-100">Скинути фільтри та параметри пошуку</a>
 
                     </div>
 

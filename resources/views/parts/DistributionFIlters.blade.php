@@ -4,7 +4,7 @@
         <input type="hidden" name="per_page" value="{{ request('per_page', 10) }}">
         <div class="card card-primary">
             <div class="card-header">
-                <h3 class="card-title">Фильтры</h3>
+                <h3 class="card-title">Фільтри</h3>
                 <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                         <i class="fas fa-minus"></i>
@@ -16,9 +16,9 @@
                 <div class="form-group row">
 
                     <div class="col-md-6">
-                        <label for="inputStatus">Дэска</label>
+                        <label for="inputStatus">Деск</label>
                         <select id="deskFilter" name="desk_id" class="form-control custom-select filter-select">
-                        <option value="0">Все</option>
+                            <option value="0">Всі</option>
                             @foreach($desks as $desk)
                                 <option
                                     value="{{ $desk->desk_id }}">
@@ -32,7 +32,7 @@
                         <label for="inputStatus">Команда</label>
                         <select id="teamFilter" name="team_id"
                                 class="form-control custom-select filter-select">
-                            <option value="0">Все</option>
+                            <option value="0">Всі</option>
                             @foreach($teams as $team)
                                 <option
                                     value="{{ $team->team_id }}">
@@ -47,10 +47,10 @@
 
                     <div class="col-md-6">
                         <a href="{{ route('leadsDistributionPage', array_filter(['page' => request('page'), 'per_page' => request('per_page')])) }}"
-                           class="btn btn-primary w-100">Сбросить фильтры</a>
+                           class="btn btn-primary w-100">Скинути фільтри</a>
                     </div>
                     <div class="col-md-6">
-                        <button type="submit" class="btn btn-primary w-100 mb-3">Применить фильтры</button>
+                        <button type="submit" class="btn btn-primary w-100 mb-3">Застосувати фільтри</button>
 
                     </div>
                 </div>
