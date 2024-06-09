@@ -169,7 +169,7 @@
         {{--инициализация selecet2 для статусов--}}
         jQuery(document).ready(function ($) {
             $('#statusesFilter').select2({
-                placeholder: "Выберите статусы",
+                placeholder: "Виберіть статуси",
                 width: '100%'
             });
         });
@@ -177,7 +177,7 @@
         {{--инициализация selecet2 для сейлов--}}
         jQuery(document).ready(function ($) {
             $('#salesFilter').select2({
-                placeholder: "Выберите сейлов",
+                placeholder: "Виберіть продажників",
                 width: '100%'
             });
         });

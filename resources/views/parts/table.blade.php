@@ -375,7 +375,7 @@
                                                     <div class="modal-dialog modal-lg">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h4 class="modal-title">Коментарий</h4>
+                                                                <h4 class="modal-title">Коментар</h4>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                         aria-label="Close">
                                                                     <span aria-hidden="true">×</span>
@@ -384,19 +384,19 @@
                                                             <div class="modal-body">
                                                             <textarea class="form-control txt_one" rows="3"
                                                                       name="lead_notes[{{ $lead->id }}]"
-                                                                      placeholder="Коментарий..."
+                                                                      placeholder="Коментар..."
                                                                       style="max-width: 1920px; transition: height 0.3s ease-out; height: 150px; resize: none; white-space: pre-wrap; word-wrap: break-word;"
                                                             ></textarea>
 
                                                             </div>
                                                             <div class="modal-footer justify-content-between">
                                                                 <button type="button" class="btn btn-default"
-                                                                        data-dismiss="modal">Закрыть
+                                                                        data-dismiss="modal">Закрити
                                                                 </button>
                                                                 <button class="btn btn-primary buttonForAddingComments"
                                                                         data-lead-id="{{ $lead->id }}"
                                                                         data-user-id="{{ auth()->user()->id }}">
-                                                                    Сохранить
+                                                                    Зберегти
                                                                 </button>
                                                             </div>
                                                             <div id="comments-container-{{ $lead->id }}"></div>
@@ -638,7 +638,7 @@
 
                     const cardFooterDiv = document.createElement('div');
                     cardFooterDiv.classList.add('card-footer');
-                    cardFooterDiv.innerHTML = `Оставил комментарий: ${comment.user_name ? comment.user_name : 'неизвестный'}`;
+                    cardFooterDiv.innerHTML = `Залишив коментар: ${comment.user_name ? comment.user_name : 'неизвестный'}`;
                     cardDiv.appendChild(cardFooterDiv);
 
                     commentsContainer.appendChild(commentDiv);
